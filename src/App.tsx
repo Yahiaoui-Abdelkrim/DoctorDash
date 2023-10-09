@@ -1,44 +1,26 @@
-import { useContext } from "react"
-import { Login, Register } from "./components"
-import { AuthContext } from './context/authContext';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Appointments from "./components/mainRoutes/Appointments";
+import MedicalHistoryData from "./components/mainRoutes/MedicalHistoryData";
+import SeeProfile from "./components/mainRoutes/SeeProfile";
+import SeeUsers from "./components/mainRoutes/SeeUsers";
+import ViewUpdateProfile from "./components/mainRoutes/ViewUpdateProfile";
+import Navbar from "./components/layout/Navbar";
 
 const App = () => {
-
-  const { status, userId } = useContext(AuthContext)
-
-  if (status === 'checking') return <p className="loading"><span>Checking credentials, wait a moment...</span></p>
-
   return (
-    <main>
-      <h1><b>Auth with</b> <span>Firebase</span> <b>and</b> <span>React</span></h1>
-      {
-        (status === 'authenticated' && userId)
-          ? <HomePage />
-          : <AuthPage />
-      }
-    </main>
-  )
-}
-export default App
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/appointments" element={<Appointments />} />
+        <Route path="/history" element={<MedicalHistoryData />} />
+        <Route path="/Profile" element={<SeeProfile />} />
+        <Route path="/Users" element={<SeeUsers />} />
+        <Route path="/Update" element={<ViewUpdateProfile />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export const HomePage = () => {
-  const { userId, handleLogOut } = useContext(AuthContext)
-
-  return (
-    <section>
-      <h5>Your ID is: <span>{userId}</span></h5>
-      <button className="btn-logout" onClick={handleLogOut}>Log out</button>
-    </section>
-  )
-}
-
-export const AuthPage = () => {
-  return (
-    <section>
-      <Login />
-      <Register />
-    </section>
-  )
-}
-
-
+export default App;

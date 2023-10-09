@@ -1,0 +1,68 @@
+const patientHistory = [
+  {
+    id: 1,
+    name: "John Doe",
+    Age: 35,
+    Gender: "Male",
+    Diagnosis: "Hypertension",
+    Last_visit: "2023-10-01",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    Age: 28,
+    Gender: "Female",
+    Diagnosis: "Migraine",
+    Last_visit: "2023-09-05",
+  },
+  {
+    id: 3,
+    name: "David Johnson",
+    Age: 45,
+    Gender: "Male",
+    Diagnosis: "Diabetes",
+    Last_visit: "2023-10-03",
+  },
+  {
+    id: 4,
+    name: "Emily Davis",
+    Age: 22,
+    Gender: "Female",
+    Diagnosis: "Depression",
+    Last_visit: "2023-09-18",
+  },
+  {
+    id: 5,
+    name: "Michael Wilson",
+    Age: 50,
+    Gender: "Male",
+    Diagnosis: "Arthritis",
+    Last_visit: "2023-10-05",
+  },
+  {
+    id: 6,
+    name: "Olivia Brown",
+    Age: 32,
+    Gender: "Female",
+    Diagnosis: "Pregnancy",
+    Last_visit: "2023-09-30",
+  },
+  {
+    id: 7,
+    name: "William Lee",
+    Age: 40,
+    Gender: "Male",
+    Diagnosis: "Back Pain",
+    Last_visit: "2023-09-14",
+  },
+  {
+    id: 8,
+    name: "Sophia Taylor",
+    Age: 30,
+    Gender: "Female",
+    Diagnosis: "Asthma",
+    Last_visit: "2023-09-21",
+  },
+];
+
+export default patientHistory;

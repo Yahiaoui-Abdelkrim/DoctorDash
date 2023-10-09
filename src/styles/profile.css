@@ -1,0 +1,32 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 18rem;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  margin-top: 5px;
+}
+
+.btn {
+  color: black;
+  background-color: gray;
+}
+.profile {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.profile h2 {
+  margin-top: 0;
+}
+
+.profile p {
+  margin-bottom: 10px;
+}
