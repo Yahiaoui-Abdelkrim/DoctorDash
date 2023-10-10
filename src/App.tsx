@@ -10,7 +10,7 @@ import Navbar from "./components/layout/Navbar";
 const App = () => {
   // const BASE_URL = import.meta.env.REACT_APP_BASE_URL;
   return (
-    <Router basename="https://65258f56b2f9df0a7bc0ed44--fabulous-buttercream-1fa9a7.netlify.app">
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
