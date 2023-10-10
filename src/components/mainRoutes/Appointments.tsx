@@ -39,6 +39,8 @@ const UserList: React.FC = () => {
         </table>
       </div>
     );
+  } else {
+    return null;
   }
 };
 
