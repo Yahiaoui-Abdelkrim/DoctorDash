@@ -2,6 +2,7 @@ import "../../styles/navbar.css";
 import { useState } from "react";
 import { AuthContext } from "../../context/authContext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -37,23 +38,23 @@ export default function Navbar() {
       >
         <ul className="btn-section">
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/Profile"> profile</a>
+            <Link to="/Profile"> profile</Link>
           </li>
 
           <li>
-            <a href="/appointments">appointments</a>
+            <Link to="/appointments">appointments</Link>
           </li>
           <li>
-            <a href="/history"> history</a>
+            <Link to="/history"> history</Link>
           </li>
           <li>
-            <a href="/Users">Users</a>
+            <Link to="/Users">Users</Link>
           </li>
           <li>
-            <a href="/Update"> Update</a>
+            <Link to="/Update"> Update</Link>
           </li>
           <li>
             {status === "authenticated" && userId ? (
