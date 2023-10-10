@@ -71,9 +71,9 @@ h5 span {
 
 .container-auth form {
   display: flex;
+  text-align: center;
   flex-direction: column;
   gap: 1em;
-  margin: 1em 0;
 }
 
 form input {
