@@ -7,9 +7,11 @@ import SeeUsers from "./components/mainRoutes/SeeUsers";
 import ViewUpdateProfile from "./components/mainRoutes/ViewUpdateProfile";
 import Navbar from "./components/layout/Navbar";
 
+const BASE_URL = import.meta.env.REACT_APP_BASE_URL;
 const App = () => {
+  console.log(BASE_URL);
   return (
-    <Router>
+    <Router basename={BASE_URL}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
