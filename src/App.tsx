@@ -7,8 +7,8 @@ import SeeUsers from "./components/mainRoutes/SeeUsers";
 import ViewUpdateProfile from "./components/mainRoutes/ViewUpdateProfile";
 import Navbar from "./components/layout/Navbar";
 
-const BASE_URL = import.meta.env.REACT_APP_BASE_URL;
 const App = () => {
+  const BASE_URL = import.meta.env.REACT_APP_BASE_URL;
   console.log(BASE_URL);
   return (
     <Router basename={BASE_URL}>
