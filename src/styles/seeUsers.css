@@ -1,0 +1,19 @@
+.grid-container {
+  display: table;
+  font: italic;
+  width: 80%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 20px;
+}
+
+.card {
+  display: table-row;
+}
+
+.card h2,
+.card p {
+  display: table-cell;
+  padding: 10px;
+}

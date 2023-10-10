@@ -1,30 +1,19 @@
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2%;
-  padding: 10px;
+  display: table;
+  font: italic;
+  width: 80%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 20px;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  width: 100%;
-  min-width: 18rem;
-  padding: 3%;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  background-color: #f8f9fa; /* Light grey */
+  display: table-row;
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.container {
-  padding: 2px 16px;
-}
-
-.container h2 {
-  font-family: Arial, sans-serif;
-  color: #007bff; /* Blue */
+.card h2,
+.card p {
+  display: table-cell;
+  padding: 10px;
 }

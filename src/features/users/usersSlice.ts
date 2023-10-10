@@ -1,5 +1,20 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import Users from "../../data/users";
+// const url = 'apiURL';
+
+// export const getUsers = createAsyncThunk(
+//   'users/getUsers',
+//   async (name, thunkAPI) => {
+//     try {
+
+//       const resp = await axios(url);
+
+//       return resp.data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue('something went wrong');
+//     }
+//   }
+// );
 
 export type User = {
   id: number;
@@ -13,7 +28,7 @@ const initialState = {
   userItems: Users,
 };
 
-const cartSlice = createSlice({
+const userSlice = createSlice({
   name: "users",
   initialState,
   reducers: {
@@ -22,10 +37,21 @@ const cartSlice = createSlice({
       state.userItems = state.userItems.filter((item) => item.id !== itemId);
     },
   },
-  extraReducers: () => {},
+  // extraReducers: (builder) => {
+  //   builder
+  //     .addCase(getUsers.pending, (state) => {
+
+  //     })
+  //     .addCase(getUsers.fulfilled, (state, action) => {
+
+  //     })
+  //     .addCase(getUsers.rejected, (state, action) => {
+
+  //     });
+  // },
 });
 
-// console.log(cartSlice);
-export const { refuse } = cartSlice.actions;
+// console.log(userSlice);
+export const { refuse } = userSlice.actions;
 
-export default cartSlice.reducer;
+export default userSlice.reducer;

@@ -1,0 +1,44 @@
+.table {
+  width: 80%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 20px;
+}
+
+.table caption {
+  caption-side: top;
+  text-align: left;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.table th {
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+}
+
+.button {
+  color: white;
+  background-color: gray;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: darkgray;
+}
+
+.refuse-button {
+  background-color: red;
+}
+
+.refuse-button:hover {
+  background-color: darkred;
+}

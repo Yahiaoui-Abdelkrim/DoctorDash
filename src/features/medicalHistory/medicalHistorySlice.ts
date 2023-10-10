@@ -12,14 +12,39 @@ export interface Patient {
 const initialState = {
   medicalHistoryData: medicalHistory,
 };
+// const url = 'apiURL';
 
+// export const getHistory = createAsyncThunk(
+//   'history/getHistory',
+//   async (name, thunkAPI) => {
+//     try {
+
+//       const resp = await axios(url);
+
+//       return resp.data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue('something went wrong');
+//     }
+//   }
+// );
 const medicalHistorySlice = createSlice({
   name: "medicalData",
   initialState,
   reducers: {
     update: () => {},
   },
-  extraReducers: () => {},
+  // extraReducers: (builder) => {
+  //   builder
+  //     .addCase(getHistory.pending, (state) => {
+
+  //     })
+  //     .addCase(getHistory.fulfilled, (state, action) => {
+
+  //     })
+  //     .addCase(getHistory.rejected, (state, action) => {
+
+  //     });
+  // },
 });
 
 // console.log(cartSlice);

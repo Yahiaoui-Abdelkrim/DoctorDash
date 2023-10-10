@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export interface Profile {
   name: string;
@@ -10,6 +10,21 @@ const initialState = {
   userName: "Kar.s",
   favColor: "blue",
 };
+// const url = 'apiURL';
+
+// export const getProfile = createAsyncThunk(
+//   'profile/getProfle',
+//   async (name, thunkAPI) => {
+//     try {
+
+//       const resp = await axios(url);
+
+//       return resp.data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue('something went wrong');
+//     }
+//   }
+// );
 
 const profileSlice = createSlice({
   name: "profile",
@@ -22,6 +37,18 @@ const profileSlice = createSlice({
       state.favColor = favoriteColor;
     },
   },
+  // extraReducers: (builder) => {
+  //   builder
+  //     .addCase(getProfile.pending, (state) => {
+
+  //     })
+  //     .addCase(getProfile.fulfilled, (state, action) => {
+
+  //     })
+  //     .addCase(getProfile.rejected, (state, action) => {
+
+  //     });
+  // },
 });
 
 export const { update } = profileSlice.actions;

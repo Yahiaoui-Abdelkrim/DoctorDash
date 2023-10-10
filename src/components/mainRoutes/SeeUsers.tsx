@@ -16,14 +16,18 @@ const PatientList: React.FC = () => {
 
   return (
     <div className="grid-container">
+      <h2>Users Accepted </h2>
+      <br />
+      <div className="card">
+        <h2>Name</h2>
+        <h2>Email</h2>
+        <h2>Address</h2>
+      </div>
       {users.map((user: User) => (
         <div className="card" key={user.id}>
-          <div className="container">
-            <h2>{user.name}</h2>
-            <p>Email: {user.email}</p>
-            <p>Address: {user.address}</p>
-            <p>Accepted: {user.accepted ? "Yes" : "No"}</p>
-          </div>
+          <p>{user.name}</p>
+          <p>{user.email}</p>
+          <p>{user.address}</p>
         </div>
       ))}
     </div>

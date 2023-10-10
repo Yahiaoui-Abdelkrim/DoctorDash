@@ -13,9 +13,10 @@ const ProfileComponent: React.FC = () => {
   );
   return (
     <div className="profile">
-      <h2>{name}</h2>
-      <p>{userName}</p>
-      <p>{favColor}</p>
+      <h2>Name: {name}</h2>
+      <br />
+      <p>UserName: {userName}</p>
+      <p>favorite color: {favColor}</p>
     </div>
   );
 };

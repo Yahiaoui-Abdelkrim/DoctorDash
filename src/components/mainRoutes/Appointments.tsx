@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store"; // replace with your store location
-import "../../styles/users.css";
+import "../../styles/appointments.css";
 import { refuse } from "../../features/users/usersSlice";
 const UserList: React.FC = () => {
   const users = useSelector((store: RootState) => store.users.userItems);
@@ -12,6 +12,8 @@ const UserList: React.FC = () => {
       <div>
         <table className="table">
           <thead>
+            <h3>Scheduled Appointments</h3>
+
             <tr>
               <th>Name</th>
               <th>Email</th>

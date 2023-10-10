@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/profile.css";
+import "../../styles/modifyProfile.css";
 import { useDispatch } from "react-redux";
 import { update } from "../../features/Profile/profileSlice";
 
@@ -36,33 +36,29 @@ const FormComponent: React.FC = () => {
 
   return (
     <form>
-      <label>
-        Name:
-        <input
-          type="text"
-          name="name"
-          value={formState.name}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Username:
-        <input
-          type="text"
-          name="userName"
-          value={formState.userName}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Favorite Color:
-        <input
-          type="text"
-          name="favoriteColor"
-          value={formState.favoriteColor}
-          onChange={handleChange}
-        />
-      </label>
+      <h3>Update Profile Data</h3>
+
+      <label>Name:</label>
+      <input
+        type="text"
+        name="name"
+        value={formState.name}
+        onChange={handleChange}
+      />
+      <label>Username:</label>
+      <input
+        type="text"
+        name="userName"
+        value={formState.userName}
+        onChange={handleChange}
+      />
+      <label>Favorite Color:</label>
+      <input
+        type="text"
+        name="favoriteColor"
+        value={formState.favoriteColor}
+        onChange={handleChange}
+      />
       <button className="btn" onClick={handleUpdate}>
         Update
       </button>
