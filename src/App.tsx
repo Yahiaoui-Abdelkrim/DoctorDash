@@ -8,10 +8,9 @@ import ViewUpdateProfile from "./components/mainRoutes/ViewUpdateProfile";
 import Navbar from "./components/layout/Navbar";
 
 const App = () => {
-  const BASE_URL = import.meta.env.REACT_APP_BASE_URL;
-  console.log(BASE_URL);
+  // const BASE_URL = import.meta.env.REACT_APP_BASE_URL;
   return (
-    <Router basename={BASE_URL}>
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
