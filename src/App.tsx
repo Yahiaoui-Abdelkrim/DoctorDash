@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Appointments from "./components/mainRoutes/Appointments";
 import MedicalHistoryData from "./components/mainRoutes/MedicalHistoryData";
@@ -10,7 +10,7 @@ import Navbar from "./components/layout/Navbar";
 const App = () => {
   // const BASE_URL = import.meta.env.REACT_APP_BASE_URL;
   return (
-    <Router>
+    <div>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/Users" element={<SeeUsers />} />
         <Route path="/Update" element={<ViewUpdateProfile />} />
       </Routes>
-    </Router>
+    </div>
   );
 };
 
